@@ -23,7 +23,6 @@ export const updateTodo = (id, updatedTodo) => async (dispatch) => {
       updatedTodo
     );
 
-    // Assuming the API responds with the updated todo data
     const updatedTodoData = res.data;
 
     dispatch({
@@ -41,8 +40,6 @@ export const addTodo = (newTodo) => async (dispatch) => {
       "https://64bdea0c2320b36433c7e526.mockapi.io/todos",
       newTodo
     );
-
-    // Assuming the API responds with the new todo data
     const addedTodoData = res.data;
 
     dispatch({
@@ -76,8 +73,6 @@ export const toggleCompleted = (id, completed) => async (dispatch) => {
       `https://64bdea0c2320b36433c7e526.mockapi.io/todos/${id}`,
       { completed: !completed }
     );
-
-    // Assuming the API responds with the updated todo data
     const updatedTodoData = res.data;
 
     dispatch({
